@@ -1,14 +1,14 @@
 {
-  "name": "sinebase-sdk",
+  "name": "waterbase-sdk",
   "version": "0.0.1",
-  "description": "SDK for sinebase-server",
+  "description": "SDK for waterbase-server",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sinewtech/sinebase-sdk.git"
+    "url": "git+https://github.com/sinewtech/waterbase-sdk.git"
   },
   "keywords": [
     "SDK",
@@ -20,7 +20,7 @@
   "author": "Sinewave LLC",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/sinewtech/sinebase-sdk/issues"
+    "url": "https://github.com/sinewtech/waterbase-sdk/issues"
   },
-  "homepage": "https://github.com/sinewtech/sinebase-sdk#readme"
+  "homepage": "https://github.com/sinewtech/waterbase-sdk#readme"
 }
