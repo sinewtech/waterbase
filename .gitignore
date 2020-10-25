@@ -20,3 +20,6 @@ node_modules/
 
 # TypeScript cache
 *.tsbuildinfo
+
+# Runtime folders
+test
