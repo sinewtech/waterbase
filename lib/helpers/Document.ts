@@ -10,7 +10,7 @@ class Document implements Doc {
 
   #client: Client;
 
-  constructor(client: Client, collection: string, id: string, data: object) {
+  constructor(client: Client, collection: string, id: string = '', data: object = {}) {
     this.#client = client;
     this.#collection = collection;
     this.id = id;
@@ -31,7 +31,7 @@ class Document implements Doc {
           {
             'Content-Type': 'application/json',
           },
-          { query: { _id: this.id }, update }
+          { query: { _id: this.id }, update: { $set: update } }
         )
         .then((value) => {
           res(value);
