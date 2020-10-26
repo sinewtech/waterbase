@@ -1,16 +1,16 @@
 import Client from '../Client';
+import QueriedDocs from './QueriedDocs';
 import Document from './Document';
-import { Collection as Coll } from '../models/Collection';
 
-class Collection implements Coll {
-  name: string = '';
+class Collection {
+  #name: string = '';
 
   #client: Client;
 
   #query: object = {};
 
   constructor(client: Client, name: string) {
-    this.name = name;
+    this.#name = name;
     this.#client = client;
   }
 
@@ -19,10 +19,38 @@ class Collection implements Coll {
    *
    * @param query object
    */
-  where = (query: object) => {
-    this.#query = query;
-    return this;
+  where = (query: any) => {
+    if (query.id) {
+      const { id, ...all } = query;
+      this.#query = { _id: id, ...all };
+    } else {
+      this.#query = query as object;
+    }
+    return { get: this.get };
   };
+
+  /**
+   * Adds a single doc to the collection
+   *
+   * @param doc object
+   */
+  add = (doc: object) =>
+    new Promise<Document>((res, rej) => {
+      this.#client
+        .call(
+          'post',
+          `/collections/${this.#name}`,
+          {
+            'content-type': 'application/json',
+          },
+          { object: doc }
+        )
+        .then((value) => {
+          const { _id, ...data } = value.doc;
+          res(new Document(this.#client, this.#name, _id, data));
+        })
+        .catch(rej);
+    });
 
   /**
    * Gets a single doc of the collection
@@ -34,15 +62,19 @@ class Collection implements Coll {
       this.#client
         .call(
           'post',
-          `/collections/query/${this.name}`,
+          `/collections/query/${this.#name}`,
           {
             'content-type': 'application/json',
           },
           { query: { _id: id } }
         )
         .then((value) => {
-          const { _id, ...docData } = value.docs[0];
-          res(new Document(this.#client, this.name, _id, docData));
+          if (value.docs.length !== 0) {
+            const { _id, ...docData } = value.docs[0];
+            res(new Document(this.#client, this.#name, _id, docData));
+          } else {
+            rej(new Error(`Couldn't find a doc with the id: ${id}`));
+          }
         })
         .catch(rej);
     });
@@ -53,36 +85,35 @@ class Collection implements Coll {
    * @param id string
    */
   get = () =>
-    new Promise<object>((res, rej) => {
-      if (this.name !== '' && this.#query !== {}) {
+    new Promise<QueriedDocs>((res, rej) => {
+      const resQD = (res: any, data: any) => {
+        const Documents: Document[] = data.docs.map((doc: any) => {
+          const { _id, ...docData } = doc;
+          return new Document(this.#client, this.#name, _id, docData);
+        });
+        const QD = new QueriedDocs(this.#query, Documents);
+        this.#query = {};
+        res(QD);
+      };
+      if (this.#name !== '' && this.#query !== {}) {
         this.#client
           .call(
             'post',
-            `/collections/query/${this.name}`,
+            `/collections/query/${this.#name}`,
             {
               'content-type': 'application/json',
             },
             { query: this.#query }
           )
           .then((data) => {
-            const Documents: Document[] = data.docs.map((doc: any) => {
-              const { _id, ...docData } = doc;
-              return new Document(this.#client, this.name, _id, docData);
-            });
-            this.#query = {};
-            res(Documents);
+            resQD(res, data);
           })
           .catch(rej);
-      } else if (this.name !== '' && this.#query === {}) {
+      } else if (this.#name !== '' && this.#query === {}) {
         this.#client
-          .call('get', `/collections/${this.name}`)
+          .call('get', `/collections/${this.#name}`)
           .then((data) => {
-            const Documents: Document[] = data.docs.map((doc: any) => {
-              const { _id, ...docData } = doc;
-              return new Document(this.#client, this.name, _id, docData);
-            });
-            this.#query = {};
-            res(Documents);
+            resQD(res, data);
           })
           .catch(rej);
       } else {
