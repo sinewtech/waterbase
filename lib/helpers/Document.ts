@@ -1,28 +1,33 @@
 import Client from '../Client';
-import { Document } from '../models/Document';
+import { Document as Doc } from '../models/Document';
 
-class Doc implements Document {
+class Document implements Doc {
   id: string = '';
 
   data: object;
 
-  collection: string = '';
+  #collection: string = '';
 
-  private client: Client;
+  #client: Client;
 
   constructor(client: Client, collection: string, id: string, data: object) {
-    this.client = client;
-    this.collection = collection;
+    this.#client = client;
+    this.#collection = collection;
     this.id = id;
     this.data = data;
   }
 
+  /**
+   * Updates the selected doc
+   *
+   * @param update object
+   */
   update = (update: object) =>
     new Promise((res, rej) => {
-      this.client
+      this.#client
         .call(
           'put',
-          `/collections/update/${this.collection}`,
+          `/collections/update/${this.#collection}`,
           {
             'Content-Type': 'application/json',
           },
@@ -34,12 +39,16 @@ class Doc implements Document {
         .catch(rej);
     });
 
+  /**
+   * Deletes the selected doc
+   *
+   */
   delete = () =>
     new Promise((res, rej) => {
-      this.client
+      this.#client
         .call(
           'delete',
-          `/collections/delete/${this.collection}`,
+          `/collections/delete/${this.#collection}`,
           {
             'Content-Type': 'application/json',
           },
@@ -52,4 +61,4 @@ class Doc implements Document {
     });
 }
 
-export = Doc;
+export = Document;
