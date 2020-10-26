@@ -4,22 +4,18 @@ import { WaterbaseConfig } from './models/Config';
 class Client {
   endpoint: String = '';
 
-  headers: any = {
-    'content-type': '',
-  };
+  headers: any = {};
 
   constructor(config: WaterbaseConfig) {
-    this.endpoint = config.endpoint;
     this.headers = config.defaultHeaders || {
       'content-type': '',
     };
+    this.setEndpoint(config.endpoint);
     this.setKey(config.secretKey);
   }
 
   /**
-   * Set Key
-   *
-   * Your secret API key
+   * Set secret key
    *
    * @param string value
    *
@@ -31,7 +27,8 @@ class Client {
   }
 
   /**
-   * Set Endpoint
+   * Set the endpoint
+   *
    * @param endpoint
    *
    * @return this
@@ -43,7 +40,10 @@ class Client {
   }
 
   /**
+   * Adds a header for the http request
+   *
    * @param key string
+   *
    * @param value string
    */
   addHeader(key: string, value: string) {
@@ -51,6 +51,17 @@ class Client {
     return this;
   }
 
+  /**
+   * Makes the call to the server a lot easier
+   *
+   * @param method string
+   *
+   * @param path string
+   *
+   * @param headers object
+   *
+   * @param params object
+   */
   async call(method: string, path: string = '', headers: object = {}, params = {}) {
     this.headers = { ...this.headers, ...headers };
     const options = {
