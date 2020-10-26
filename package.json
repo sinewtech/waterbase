@@ -1,5 +1,5 @@
 {
-  "name": "waterbase-sdk",
+  "name": "waterbase",
   "version": "0.0.1",
   "description": "SDK for waterbase-server",
   "main": "dist/index.js",
