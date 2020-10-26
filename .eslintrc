@@ -26,6 +26,8 @@
         "ts": "never"
       }
     ],
-    "implicit-arrow-linebreak": ["error", "below"]
+    "implicit-arrow-linebreak": ["error", "below"],
+    "no-underscore-dangle": "off",
+    "comma-dangle": ["always-multiline"]
   }
 }
