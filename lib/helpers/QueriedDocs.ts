@@ -1,13 +1,13 @@
 import { QueriedDocs as QD } from '../models/QueriedDocs';
-import { Document } from '../models/Document';
+import { Documents } from '../models/Documents';
 
 class QueriedDocs implements QD {
   size: number = 0;
-  docs: Document[] = [];
+  docs: Documents[] = [];
   empty: boolean = false;
   query: object = {};
 
-  constructor(query: object, docs: Document[]) {
+  constructor(query: object, docs: Documents[]) {
     this.docs = docs;
     this.size = this.docs.length;
     this.empty = this.docs.length <= 0;

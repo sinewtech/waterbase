@@ -1,7 +1,7 @@
 import Client from '../Client';
-import { Document as Doc } from '../models/Document';
+import { Documents } from '../models/Documents';
 
-class Document implements Doc {
+class Document implements Documents {
   id: string = '';
 
   data: object;
