@@ -40,7 +40,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged lib/**/*.ts"
+      "pre-commit": "pretty-quick --staged index.ts lib/**/*.ts"
     }
   },
   "dependencies": {
