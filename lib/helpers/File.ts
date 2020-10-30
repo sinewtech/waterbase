@@ -10,10 +10,21 @@ class File implements Files {
 
   #client: Client;
 
-  constructor(client: Client, path: string, name: string) {
-    this.path = path;
-    this.name = name;
+  constructor(client: Client, path: string) {
     this.#client = client;
+    this.path = path;
+  }
+
+  getDownloadUrl() {
+    return new Promise<string>((res, rej) => {
+      this.#client
+        .call('post', '/storage/file', {}, { path: this.path })
+        .then((url) => {
+          this.downloadUrl = url;
+          res(url);
+        })
+        .catch(rej);
+    });
   }
 }
 

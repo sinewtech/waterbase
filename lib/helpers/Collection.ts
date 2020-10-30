@@ -39,7 +39,7 @@ class Collection {
       this.#client
         .call(
           'post',
-          `/collections/${this.#name}`,
+          `/database/${this.#name}`,
           {
             'content-type': 'application/json',
           },
@@ -62,7 +62,7 @@ class Collection {
       this.#client
         .call(
           'post',
-          `/collections/query/${this.#name}`,
+          `/database/query/${this.#name}`,
           {
             'content-type': 'application/json',
           },
@@ -99,7 +99,7 @@ class Collection {
         this.#client
           .call(
             'post',
-            `/collections/query/${this.#name}`,
+            `/database/query/${this.#name}`,
             {
               'content-type': 'application/json',
             },
@@ -111,7 +111,7 @@ class Collection {
           .catch(rej);
       } else if (this.#name !== '' && this.#query === {}) {
         this.#client
-          .call('get', `/collections/${this.#name}`)
+          .call('get', `/database/${this.#name}`)
           .then((data) => {
             resQD(res, data);
           })

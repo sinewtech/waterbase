@@ -27,7 +27,7 @@ class Document implements Documents {
       this.#client
         .call(
           'put',
-          `/collections/update/${this.#collection}`,
+          `/database/update/${this.#collection}`,
           {
             'Content-Type': 'application/json',
           },
@@ -48,7 +48,7 @@ class Document implements Documents {
       this.#client
         .call(
           'delete',
-          `/collections/delete/${this.#collection}`,
+          `/database/delete/${this.#collection}`,
           {
             'Content-Type': 'application/json',
           },

@@ -1,8 +1,8 @@
-import { Document } from './Document';
+import { Documents } from './Documents';
 
 export interface QueriedDocs {
   size: number;
-  docs: Document[];
+  docs: Documents[];
   empty: boolean;
   query: object;
 }
