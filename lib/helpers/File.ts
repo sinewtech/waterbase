@@ -4,10 +4,6 @@ import { Files } from '../models/Files';
 class File implements Files {
   path: string = '';
 
-  name: string = '';
-
-  downloadUrl: string = '';
-
   #client: Client;
 
   constructor(client: Client, path: string) {
@@ -15,13 +11,46 @@ class File implements Files {
     this.path = path;
   }
 
+  delete() {
+    return new Promise((res, rej) => {
+      this.#client
+        .call(
+          'delete',
+          '/storage/',
+          {
+            'content-type': 'application/json',
+          },
+          { path: this.path }
+        )
+        .then((resp) => {
+          if (resp.success) {
+            res(resp);
+          } else {
+            rej(new Error("Wasn't able to delete the file"));
+          }
+        })
+        .catch(rej);
+    });
+  }
+
   getDownloadUrl() {
     return new Promise<string>((res, rej) => {
       this.#client
-        .call('post', '/storage/file', {}, { path: this.path })
-        .then((url) => {
-          this.downloadUrl = url;
-          res(url);
+        .call(
+          'post',
+          '/storage/file',
+          {
+            'content-type': 'application/json',
+          },
+          { path: this.path }
+        )
+        .then((resp) => {
+          if (resp.success) {
+            const { path } = resp.file;
+            res(`${this.#client.endpoint}/${path}`);
+          } else {
+            rej(new Error("Wasn't able to get a download url"));
+          }
         })
         .catch(rej);
     });
