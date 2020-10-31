@@ -21,6 +21,8 @@ class Document implements Documents {
    * Updates the selected doc
    *
    * @param update object
+   *
+   * @return Promise<any>
    */
   update = (update: object) =>
     new Promise((res, rej) => {
@@ -42,6 +44,7 @@ class Document implements Documents {
   /**
    * Deletes the selected doc
    *
+   * @return Promise<any>
    */
   delete = () =>
     new Promise((res, rej) => {

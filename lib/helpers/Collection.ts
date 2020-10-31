@@ -18,6 +18,8 @@ class Collection {
    * Assigns the query to be ready before getting the docs
    *
    * @param query object
+   *
+   * @return self
    */
   where = (query: any) => {
     if (query.id) {
@@ -33,6 +35,8 @@ class Collection {
    * Adds a single doc to the collection
    *
    * @param doc object
+   *
+   * @return Promise<Document>
    */
   add = (doc: object) =>
     new Promise<Document>((res, rej) => {
@@ -56,6 +60,8 @@ class Collection {
    * Gets a single doc of the collection
    *
    * @param id string
+   *
+   * @return Promise<Document>
    */
   doc = (id: string) =>
     new Promise<Document>((res, rej) => {
@@ -83,6 +89,8 @@ class Collection {
    * Gets gets all the docs that the where got or all in general
    *
    * @param id string
+   *
+   * @return Promise<QueriedDocs>
    */
   get = () =>
     new Promise<QueriedDocs>((res, rej) => {
