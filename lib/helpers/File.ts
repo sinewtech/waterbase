@@ -1,6 +1,5 @@
 import Client from '../Client';
 import { Files } from '../models/Files';
-
 class File implements Files {
   path: string = '';
 
@@ -11,6 +10,11 @@ class File implements Files {
     this.path = path;
   }
 
+  /**
+   * Delete the file
+   *
+   * @return Promise<any>
+   */
   delete() {
     return new Promise((res, rej) => {
       this.#client
@@ -33,6 +37,11 @@ class File implements Files {
     });
   }
 
+  /**
+   * Gets a download url for the file
+   *
+   * @return string
+   */
   getDownloadUrl() {
     return new Promise<string>((res, rej) => {
       this.#client
