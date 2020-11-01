@@ -1,5 +1,7 @@
 import Client from '../Client';
 import { Files } from '../models/Files';
+import FormData from 'form-data';
+import path from 'path';
 class File implements Files {
   path: string = '';
 
@@ -60,6 +62,34 @@ class File implements Files {
           } else {
             rej(new Error("Wasn't able to get a download url"));
           }
+        })
+        .catch(rej);
+    });
+  }
+
+  /**
+   * Uploads the param to the file path
+   *
+   * @param file
+   *
+   * @return Promise<any>
+   */
+  upload(file: any) {
+    return new Promise((res, rej) => {
+      const form = new FormData();
+      form.append('path', this.path);
+      form.append('file', file);
+      this.#client
+        .call(
+          'post',
+          '/storage/',
+          {
+            'content-type': 'multipart/form-data;',
+          },
+          form
+        )
+        .then((data) => {
+          res(data);
         })
         .catch(rej);
     });
