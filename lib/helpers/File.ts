@@ -78,15 +78,16 @@ class File implements Files {
     return new Promise((res, rej) => {
       const form = new FormData();
       form.append('path', this.path);
-      form.append('file', file);
+      form.append('file', file, path.basename(this.path));
       this.#client
         .call(
           'post',
           '/storage/',
           {
             'content-type': 'multipart/form-data;',
+            ...form.getHeaders(),
           },
-          form
+          form.getBuffer()
         )
         .then((data) => {
           res(data);
