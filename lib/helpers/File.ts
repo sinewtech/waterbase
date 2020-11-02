@@ -70,18 +70,50 @@ class File implements Files {
   /**
    * Uploads the param to the file path
    *
-   * @param file
+   * @param file Buffer
    *
-   * @return Promise<any>
+   * @return Promise<object>
    */
-  upload(file: any) {
-    return new Promise((res, rej) => {
+  upload(file: Buffer) {
+    return new Promise<object>((res, rej) => {
       const form = new FormData();
       form.append('path', this.path);
       form.append('file', file, path.basename(this.path));
       this.#client
         .call(
           'post',
+          '/storage/',
+          {
+            'content-type': 'multipart/form-data;',
+            ...form.getHeaders(),
+          },
+          form.getBuffer()
+        )
+        .then((data) => {
+          res(data);
+        })
+        .catch(rej);
+    });
+  }
+
+  /**
+   * Updates the file with a new path or just the file
+   *
+   * @param file Buffer
+   *
+   * @param newPath? string
+   *
+   * @return Promise<object>
+   */
+  update(file: Buffer, newPath?: string) {
+    return new Promise<object>((res, rej) => {
+      const form = new FormData();
+      form.append('oldPath', this.path);
+      form.append('path', newPath || this.path);
+      form.append('file', file, path.basename(this.path));
+      this.#client
+        .call(
+          'put',
           '/storage/',
           {
             'content-type': 'multipart/form-data;',
