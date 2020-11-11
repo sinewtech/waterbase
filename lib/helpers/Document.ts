@@ -31,7 +31,7 @@ class Document implements Documents {
           'put',
           `/database/update/${this.#collection}`,
           {
-            'Content-Type': 'application/json',
+            'content-type': 'application/json',
           },
           { query: { _id: this.id }, update: { $set: update } }
         )
@@ -53,7 +53,7 @@ class Document implements Documents {
           'delete',
           `/database/delete/${this.#collection}`,
           {
-            'Content-Type': 'application/json',
+            'content-type': 'application/json',
           },
           { query: { _id: this.id } }
         )
