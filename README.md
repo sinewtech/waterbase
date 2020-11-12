@@ -1,5 +1,5 @@
 # :droplet: Waterbase
-Free, open source and self-hosted BaaS by Sinewave. 
+Free, open source and self-hosted BaaS sdk by Sinewave. 
 
 ## Why
 We wanted to have the challenge of something really big...
