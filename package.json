@@ -6,7 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "prepare": "npm run build",
-    "build": "tsc"
+    "build": "tsc",
+    "docs": "typedoc --mode file --plugin typedoc-plugin-markdown --readme none lib"
   },
   "repository": {
     "type": "git",
@@ -43,7 +44,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged index.ts lib/**/*.ts; typedoc --mode file --plugin typedoc-plugin-markdown --readme none lib"
+      "pre-commit": "pretty-quick --staged index.ts lib/**/*.ts"
     }
   },
   "dependencies": {

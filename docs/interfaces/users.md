@@ -26,7 +26,7 @@
 
 • **email**: string
 
-_Defined in [models/Users.ts:2](https://github.com/sinewtech/waterbase/blob/5854550/lib/models/Users.ts#L2)_
+_Defined in [models/Users.ts:2](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/models/Users.ts#L2)_
 
 ---
 
@@ -34,7 +34,7 @@ _Defined in [models/Users.ts:2](https://github.com/sinewtech/waterbase/blob/5854
 
 • **id**: string
 
-_Defined in [models/Users.ts:3](https://github.com/sinewtech/waterbase/blob/5854550/lib/models/Users.ts#L3)_
+_Defined in [models/Users.ts:3](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/models/Users.ts#L3)_
 
 ---
 
@@ -42,4 +42,4 @@ _Defined in [models/Users.ts:3](https://github.com/sinewtech/waterbase/blob/5854
 
 • `Optional` **profile**: undefined \| object
 
-_Defined in [models/Users.ts:4](https://github.com/sinewtech/waterbase/blob/5854550/lib/models/Users.ts#L4)_
+_Defined in [models/Users.ts:4](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/models/Users.ts#L4)_

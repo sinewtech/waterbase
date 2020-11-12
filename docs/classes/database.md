@@ -32,7 +32,7 @@
 
 _Inherited from [Service](service.md).[constructor](service.md#constructor)_
 
-_Defined in [Service.ts:4](https://github.com/sinewtech/waterbase/blob/5854550/lib/Service.ts#L4)_
+_Defined in [Service.ts:4](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/Service.ts#L4)_
 
 #### Parameters:
 
@@ -50,7 +50,7 @@ _Defined in [Service.ts:4](https://github.com/sinewtech/waterbase/blob/5854550/l
 
 _Inherited from [Service](service.md).[client](service.md#client)_
 
-_Defined in [Service.ts:4](https://github.com/sinewtech/waterbase/blob/5854550/lib/Service.ts#L4)_
+_Defined in [Service.ts:4](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/Service.ts#L4)_
 
 ## Methods
 
@@ -58,7 +58,7 @@ _Defined in [Service.ts:4](https://github.com/sinewtech/waterbase/blob/5854550/l
 
 ▸ **collection**(`name`: string): [Collection](collection.md)
 
-_Defined in [services/Database.ts:5](https://github.com/sinewtech/waterbase/blob/5854550/lib/services/Database.ts#L5)_
+_Defined in [services/Database.ts:5](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/services/Database.ts#L5)_
 
 #### Parameters:
 

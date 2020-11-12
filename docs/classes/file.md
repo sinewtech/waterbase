@@ -36,7 +36,7 @@
 
 \+ **new File**(`client`: [Client](client.md), `path`: string): [File](file.md)
 
-_Defined in [helpers/File.ts:8](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/File.ts#L8)_
+_Defined in [helpers/File.ts:8](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/File.ts#L8)_
 
 #### Parameters:
 
@@ -53,7 +53,7 @@ _Defined in [helpers/File.ts:8](https://github.com/sinewtech/waterbase/blob/5854
 
 • `Private` **#client**: [Client](client.md)
 
-_Defined in [helpers/File.ts:8](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/File.ts#L8)_
+_Defined in [helpers/File.ts:8](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/File.ts#L8)_
 
 ---
 
@@ -63,7 +63,7 @@ _Defined in [helpers/File.ts:8](https://github.com/sinewtech/waterbase/blob/5854
 
 _Implementation of [Files](../interfaces/files.md).[path](../interfaces/files.md#path)_
 
-_Defined in [helpers/File.ts:6](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/File.ts#L6)_
+_Defined in [helpers/File.ts:6](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/File.ts#L6)_
 
 ## Methods
 
@@ -71,7 +71,7 @@ _Defined in [helpers/File.ts:6](https://github.com/sinewtech/waterbase/blob/5854
 
 ▸ **delete**(): Promise\<unknown>
 
-_Defined in [helpers/File.ts:20](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/File.ts#L20)_
+_Defined in [helpers/File.ts:20](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/File.ts#L20)_
 
 Delete the file
 
@@ -85,7 +85,7 @@ Promise<any>
 
 ▸ **getDownloadUrl**(): Promise\<string>
 
-_Defined in [helpers/File.ts:47](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/File.ts#L47)_
+_Defined in [helpers/File.ts:47](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/File.ts#L47)_
 
 Gets a download url for the file
 
@@ -99,7 +99,7 @@ string
 
 ▸ **update**(`file`: Buffer, `newPath?`: undefined \| string): Promise\<object>
 
-_Defined in [helpers/File.ts:108](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/File.ts#L108)_
+_Defined in [helpers/File.ts:108](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/File.ts#L108)_
 
 Updates the file with a new path or just the file
 
@@ -120,7 +120,7 @@ Promise<object>
 
 ▸ **upload**(`file`: Buffer): Promise\<object>
 
-_Defined in [helpers/File.ts:77](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/File.ts#L77)_
+_Defined in [helpers/File.ts:77](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/File.ts#L77)_
 
 Uploads the param to the file path
 

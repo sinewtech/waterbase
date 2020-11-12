@@ -38,7 +38,7 @@
 
 \+ **new User**(`client`: [Client](client.md), `token`: string): [User](user.md)
 
-_Defined in [helpers/User.ts:15](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/User.ts#L15)_
+_Defined in [helpers/User.ts:15](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/User.ts#L15)_
 
 #### Parameters:
 
@@ -55,7 +55,7 @@ _Defined in [helpers/User.ts:15](https://github.com/sinewtech/waterbase/blob/585
 
 • `Private` **#client**: [Client](client.md)
 
-_Defined in [helpers/User.ts:15](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/User.ts#L15)_
+_Defined in [helpers/User.ts:15](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/User.ts#L15)_
 
 ---
 
@@ -63,7 +63,7 @@ _Defined in [helpers/User.ts:15](https://github.com/sinewtech/waterbase/blob/585
 
 • `Private` **#refreshToken**: string = ""
 
-_Defined in [helpers/User.ts:14](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/User.ts#L14)_
+_Defined in [helpers/User.ts:14](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/User.ts#L14)_
 
 ---
 
@@ -71,7 +71,7 @@ _Defined in [helpers/User.ts:14](https://github.com/sinewtech/waterbase/blob/585
 
 • `Private` **#token**: string = ""
 
-_Defined in [helpers/User.ts:13](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/User.ts#L13)_
+_Defined in [helpers/User.ts:13](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/User.ts#L13)_
 
 ---
 
@@ -81,7 +81,7 @@ _Defined in [helpers/User.ts:13](https://github.com/sinewtech/waterbase/blob/585
 
 _Implementation of [Users](../interfaces/users.md).[email](../interfaces/users.md#email)_
 
-_Defined in [helpers/User.ts:10](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/User.ts#L10)_
+_Defined in [helpers/User.ts:10](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/User.ts#L10)_
 
 ---
 
@@ -91,7 +91,7 @@ _Defined in [helpers/User.ts:10](https://github.com/sinewtech/waterbase/blob/585
 
 _Implementation of [Users](../interfaces/users.md).[id](../interfaces/users.md#id)_
 
-_Defined in [helpers/User.ts:11](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/User.ts#L11)_
+_Defined in [helpers/User.ts:11](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/User.ts#L11)_
 
 ---
 
@@ -101,7 +101,7 @@ _Defined in [helpers/User.ts:11](https://github.com/sinewtech/waterbase/blob/585
 
 _Implementation of [Users](../interfaces/users.md).[profile](../interfaces/users.md#profile)_
 
-_Defined in [helpers/User.ts:12](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/User.ts#L12)_
+_Defined in [helpers/User.ts:12](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/User.ts#L12)_
 
 ## Methods
 
@@ -109,7 +109,7 @@ _Defined in [helpers/User.ts:12](https://github.com/sinewtech/waterbase/blob/585
 
 ▸ **deleteAccount**(): Promise\<unknown>
 
-_Defined in [helpers/User.ts:65](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/User.ts#L65)_
+_Defined in [helpers/User.ts:65](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/User.ts#L65)_
 
 Will delete the account from waterbase
 
@@ -123,7 +123,7 @@ Promise<any>
 
 ▸ **renewToken**(): Promise\<unknown>
 
-_Defined in [helpers/User.ts:33](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/User.ts#L33)_
+_Defined in [helpers/User.ts:33](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/User.ts#L33)_
 
 Refresh the jwt token
 

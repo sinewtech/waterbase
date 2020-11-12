@@ -25,7 +25,7 @@
 
 • **data**: object
 
-_Defined in [models/Documents.ts:3](https://github.com/sinewtech/waterbase/blob/5854550/lib/models/Documents.ts#L3)_
+_Defined in [models/Documents.ts:3](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/models/Documents.ts#L3)_
 
 ---
 
@@ -33,4 +33,4 @@ _Defined in [models/Documents.ts:3](https://github.com/sinewtech/waterbase/blob/
 
 • **id**: string
 
-_Defined in [models/Documents.ts:2](https://github.com/sinewtech/waterbase/blob/5854550/lib/models/Documents.ts#L2)_
+_Defined in [models/Documents.ts:2](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/models/Documents.ts#L2)_

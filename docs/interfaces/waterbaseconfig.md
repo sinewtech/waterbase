@@ -22,7 +22,7 @@
 
 • `Optional` **defaultHeaders**: undefined \| object
 
-_Defined in [models/Config.ts:4](https://github.com/sinewtech/waterbase/blob/5854550/lib/models/Config.ts#L4)_
+_Defined in [models/Config.ts:4](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/models/Config.ts#L4)_
 
 ---
 
@@ -30,7 +30,7 @@ _Defined in [models/Config.ts:4](https://github.com/sinewtech/waterbase/blob/585
 
 • **endpoint**: string
 
-_Defined in [models/Config.ts:2](https://github.com/sinewtech/waterbase/blob/5854550/lib/models/Config.ts#L2)_
+_Defined in [models/Config.ts:2](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/models/Config.ts#L2)_
 
 ---
 
@@ -38,4 +38,4 @@ _Defined in [models/Config.ts:2](https://github.com/sinewtech/waterbase/blob/585
 
 • **secretKey**: string
 
-_Defined in [models/Config.ts:3](https://github.com/sinewtech/waterbase/blob/5854550/lib/models/Config.ts#L3)_
+_Defined in [models/Config.ts:3](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/models/Config.ts#L3)_

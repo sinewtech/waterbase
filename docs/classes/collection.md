@@ -34,7 +34,7 @@
 
 \+ **new Collection**(`client`: [Client](client.md), `name`: string): [Collection](collection.md)
 
-_Defined in [helpers/Collection.ts:10](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/Collection.ts#L10)_
+_Defined in [helpers/Collection.ts:10](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/Collection.ts#L10)_
 
 #### Parameters:
 
@@ -51,7 +51,7 @@ _Defined in [helpers/Collection.ts:10](https://github.com/sinewtech/waterbase/bl
 
 • `Private` **#client**: [Client](client.md)
 
-_Defined in [helpers/Collection.ts:8](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/Collection.ts#L8)_
+_Defined in [helpers/Collection.ts:8](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/Collection.ts#L8)_
 
 ---
 
@@ -59,7 +59,7 @@ _Defined in [helpers/Collection.ts:8](https://github.com/sinewtech/waterbase/blo
 
 • `Private` **#name**: string = ""
 
-_Defined in [helpers/Collection.ts:6](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/Collection.ts#L6)_
+_Defined in [helpers/Collection.ts:6](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/Collection.ts#L6)_
 
 ---
 
@@ -67,7 +67,7 @@ _Defined in [helpers/Collection.ts:6](https://github.com/sinewtech/waterbase/blo
 
 • `Private` **#query**: object
 
-_Defined in [helpers/Collection.ts:10](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/Collection.ts#L10)_
+_Defined in [helpers/Collection.ts:10](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/Collection.ts#L10)_
 
 ---
 
@@ -75,7 +75,7 @@ _Defined in [helpers/Collection.ts:10](https://github.com/sinewtech/waterbase/bl
 
 • **name**: string
 
-_Defined in [models/Collection.ts:2](https://github.com/sinewtech/waterbase/blob/5854550/lib/models/Collection.ts#L2)_
+_Defined in [models/Collection.ts:2](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/models/Collection.ts#L2)_
 
 ## Methods
 
@@ -83,7 +83,7 @@ _Defined in [models/Collection.ts:2](https://github.com/sinewtech/waterbase/blob
 
 ▸ **add**(`doc`: object): Promise\<[Document](document.md)>
 
-_Defined in [helpers/Collection.ts:41](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/Collection.ts#L41)_
+_Defined in [helpers/Collection.ts:41](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/Collection.ts#L41)_
 
 Adds a single doc to the collection
 
@@ -103,7 +103,7 @@ Promise<Document>
 
 ▸ **doc**(`id`: string): Promise\<[Document](document.md)>
 
-_Defined in [helpers/Collection.ts:66](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/Collection.ts#L66)_
+_Defined in [helpers/Collection.ts:66](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/Collection.ts#L66)_
 
 Gets a single doc of the collection
 
@@ -123,7 +123,7 @@ Promise<Document>
 
 ▸ **get**(): Promise\<QueriedDocs>
 
-_Defined in [helpers/Collection.ts:95](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/Collection.ts#L95)_
+_Defined in [helpers/Collection.ts:95](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/Collection.ts#L95)_
 
 Gets gets all the docs that the where got or all in general
 
@@ -137,7 +137,7 @@ Promise<QueriedDocs>
 
 ▸ **where**(`query`: any): object
 
-_Defined in [helpers/Collection.ts:24](https://github.com/sinewtech/waterbase/blob/5854550/lib/helpers/Collection.ts#L24)_
+_Defined in [helpers/Collection.ts:24](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/helpers/Collection.ts#L24)_
 
 Assigns the query to be ready before getting the docs
 

@@ -30,7 +30,7 @@
 
 \+ **new Service**(`client`: [Client](client.md)): [Service](service.md)
 
-_Defined in [Service.ts:4](https://github.com/sinewtech/waterbase/blob/5854550/lib/Service.ts#L4)_
+_Defined in [Service.ts:4](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/Service.ts#L4)_
 
 #### Parameters:
 
@@ -46,4 +46,4 @@ _Defined in [Service.ts:4](https://github.com/sinewtech/waterbase/blob/5854550/l
 
 • **client**: [Client](client.md)
 
-_Defined in [Service.ts:4](https://github.com/sinewtech/waterbase/blob/5854550/lib/Service.ts#L4)_
+_Defined in [Service.ts:4](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/Service.ts#L4)_

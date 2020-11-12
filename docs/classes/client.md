@@ -32,7 +32,7 @@
 
 \+ **new Client**(`config`: [WaterbaseConfig](../interfaces/waterbaseconfig.md)): [Client](client.md)
 
-_Defined in [Client.ts:7](https://github.com/sinewtech/waterbase/blob/5854550/lib/Client.ts#L7)_
+_Defined in [Client.ts:7](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/Client.ts#L7)_
 
 #### Parameters:
 
@@ -48,7 +48,7 @@ _Defined in [Client.ts:7](https://github.com/sinewtech/waterbase/blob/5854550/li
 
 • **endpoint**: String = ""
 
-_Defined in [Client.ts:5](https://github.com/sinewtech/waterbase/blob/5854550/lib/Client.ts#L5)_
+_Defined in [Client.ts:5](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/Client.ts#L5)_
 
 ---
 
@@ -56,7 +56,7 @@ _Defined in [Client.ts:5](https://github.com/sinewtech/waterbase/blob/5854550/li
 
 • **headers**: any
 
-_Defined in [Client.ts:7](https://github.com/sinewtech/waterbase/blob/5854550/lib/Client.ts#L7)_
+_Defined in [Client.ts:7](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/Client.ts#L7)_
 
 ## Methods
 
@@ -64,7 +64,7 @@ _Defined in [Client.ts:7](https://github.com/sinewtech/waterbase/blob/5854550/li
 
 ▸ **addHeader**(`key`: string, `value`: string): this
 
-_Defined in [Client.ts:49](https://github.com/sinewtech/waterbase/blob/5854550/lib/Client.ts#L49)_
+_Defined in [Client.ts:49](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/Client.ts#L49)_
 
 Adds a header for the http request
 
@@ -83,7 +83,7 @@ Adds a header for the http request
 
 ▸ **call**(`method`: string, `path?`: string, `headers?`: object, `params?`: {}): Promise\<any>
 
-_Defined in [Client.ts:65](https://github.com/sinewtech/waterbase/blob/5854550/lib/Client.ts#L65)_
+_Defined in [Client.ts:65](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/Client.ts#L65)_
 
 Makes the call to the server a lot easier
 
@@ -104,7 +104,7 @@ Makes the call to the server a lot easier
 
 ▸ **setEndpoint**(`endpoint`: string): this
 
-_Defined in [Client.ts:36](https://github.com/sinewtech/waterbase/blob/5854550/lib/Client.ts#L36)_
+_Defined in [Client.ts:36](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/Client.ts#L36)_
 
 Set the endpoint
 
@@ -124,7 +124,7 @@ this
 
 ▸ **setKey**(`value`: string): this
 
-_Defined in [Client.ts:24](https://github.com/sinewtech/waterbase/blob/5854550/lib/Client.ts#L24)_
+_Defined in [Client.ts:24](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/Client.ts#L24)_
 
 Set secret key
 

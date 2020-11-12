@@ -24,4 +24,4 @@
 
 • **path**: string
 
-_Defined in [models/Files.ts:2](https://github.com/sinewtech/waterbase/blob/5854550/lib/models/Files.ts#L2)_
+_Defined in [models/Files.ts:2](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/models/Files.ts#L2)_

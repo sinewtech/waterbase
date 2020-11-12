@@ -35,7 +35,7 @@
 
 _Inherited from [Service](service.md).[constructor](service.md#constructor)_
 
-_Defined in [Service.ts:4](https://github.com/sinewtech/waterbase/blob/5854550/lib/Service.ts#L4)_
+_Defined in [Service.ts:4](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/Service.ts#L4)_
 
 #### Parameters:
 
@@ -53,7 +53,7 @@ _Defined in [Service.ts:4](https://github.com/sinewtech/waterbase/blob/5854550/l
 
 _Inherited from [Service](service.md).[client](service.md#client)_
 
-_Defined in [Service.ts:4](https://github.com/sinewtech/waterbase/blob/5854550/lib/Service.ts#L4)_
+_Defined in [Service.ts:4](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/Service.ts#L4)_
 
 ## Methods
 
@@ -61,7 +61,7 @@ _Defined in [Service.ts:4](https://github.com/sinewtech/waterbase/blob/5854550/l
 
 ▸ **CreateAccount**(`email`: string, `password`: string, `profile?`: undefined \| object): Promise\<[User](user.md)>
 
-_Defined in [services/Auth.ts:22](https://github.com/sinewtech/waterbase/blob/5854550/lib/services/Auth.ts#L22)_
+_Defined in [services/Auth.ts:22](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/services/Auth.ts#L22)_
 
 Will create the account and create a JWT and store it (login)
 
@@ -83,7 +83,7 @@ Promise<User>
 
 ▸ **getCurrentUser**(): Promise\<[User](user.md)>
 
-_Defined in [services/Auth.ts:78](https://github.com/sinewtech/waterbase/blob/5854550/lib/services/Auth.ts#L78)_
+_Defined in [services/Auth.ts:78](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/services/Auth.ts#L78)_
 
 Will decode the current JWT and return it
 
@@ -97,7 +97,7 @@ Promise<User>
 
 ▸ **loginWithEmailAndPassword**(`email`: string, `password`: string): Promise\<[User](user.md)>
 
-_Defined in [services/Auth.ts:52](https://github.com/sinewtech/waterbase/blob/5854550/lib/services/Auth.ts#L52)_
+_Defined in [services/Auth.ts:52](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/services/Auth.ts#L52)_
 
 Will create JWT and store it if the user exists
 
@@ -118,7 +118,7 @@ Promise<User>
 
 ▸ **signOut**(): Promise\<unknown>
 
-_Defined in [services/Auth.ts:96](https://github.com/sinewtech/waterbase/blob/5854550/lib/services/Auth.ts#L96)_
+_Defined in [services/Auth.ts:96](https://github.com/sinewtech/waterbase/blob/7e81c58/lib/services/Auth.ts#L96)_
 
 Will sign out the user from its account
 
