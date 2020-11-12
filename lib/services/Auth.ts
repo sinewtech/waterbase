@@ -6,6 +6,19 @@ if (typeof localStorage === 'undefined' || localStorage === null) {
   global.localStorage = new LocalStorage('./localStorage');
 }
 class Auth extends Service {
+  /**
+   *
+   * Will create the account and create a JWT and store it (login)
+   *
+   * @param email string
+   *
+   * @param password string
+   *
+   * @param profile object
+   *
+   * @return Promise<User>
+   */
+
   CreateAccount = (email: string, password: string, profile?: object) => {
     return new Promise<User>((res, rej) => {
       this.client
@@ -24,6 +37,17 @@ class Auth extends Service {
         .catch(rej);
     });
   };
+
+  /**
+   *
+   * Will create JWT and store it if the user exists
+   *
+   * @param email string
+   *
+   * @param password string
+   *
+   * @return Promise<User>
+   */
 
   loginWithEmailAndPassword = (email: string, password: string) => {
     return new Promise<User>((res, rej) => {
@@ -44,6 +68,13 @@ class Auth extends Service {
     });
   };
 
+  /**
+   *
+   * Will decode the current JWT and return it
+   *
+   * @return Promise<User>
+   */
+
   getCurrentUser = () => {
     return new Promise<User>((res, rej) => {
       const token = localStorage.getItem('authToken');
@@ -54,6 +85,13 @@ class Auth extends Service {
       }
     });
   };
+
+  /**
+   *
+   * Will sign out the user from its account
+   *
+   * @return Promise<any>
+   */
 
   signOut = () => {
     return new Promise((res, rej) => {
