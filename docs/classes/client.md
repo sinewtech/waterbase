@@ -1,6 +1,6 @@
 **[waterbase](../README.md)**
 
-> [Globals](../globals.md) / ["Client"](../modules/_client_.md) / Client
+> [Globals](../README.md) / Client
 
 # Class: Client
 
@@ -12,35 +12,35 @@
 
 ### Constructors
 
-- [constructor](_client_.client.md#constructor)
+- [constructor](client.md#constructor)
 
 ### Properties
 
-- [endpoint](_client_.client.md#endpoint)
-- [headers](_client_.client.md#headers)
+- [endpoint](client.md#endpoint)
+- [headers](client.md#headers)
 
 ### Methods
 
-- [addHeader](_client_.client.md#addheader)
-- [call](_client_.client.md#call)
-- [setEndpoint](_client_.client.md#setendpoint)
-- [setKey](_client_.client.md#setkey)
+- [addHeader](client.md#addheader)
+- [call](client.md#call)
+- [setEndpoint](client.md#setendpoint)
+- [setKey](client.md#setkey)
 
 ## Constructors
 
 ### constructor
 
-\+ **new Client**(`config`: [WaterbaseConfig](../interfaces/_models_config_.waterbaseconfig.md)): [Client](_client_.client.md)
+\+ **new Client**(`config`: [WaterbaseConfig](../interfaces/waterbaseconfig.md)): [Client](client.md)
 
-_Defined in [Client.ts:7](https://github.com/sinewtech/waterbase/blob/b0835b6/lib/Client.ts#L7)_
+_Defined in [Client.ts:7](https://github.com/sinewtech/waterbase/blob/5854550/lib/Client.ts#L7)_
 
 #### Parameters:
 
-| Name     | Type                                                                |
-| -------- | ------------------------------------------------------------------- |
-| `config` | [WaterbaseConfig](../interfaces/_models_config_.waterbaseconfig.md) |
+| Name     | Type                                                |
+| -------- | --------------------------------------------------- |
+| `config` | [WaterbaseConfig](../interfaces/waterbaseconfig.md) |
 
-**Returns:** [Client](_client_.client.md)
+**Returns:** [Client](client.md)
 
 ## Properties
 
@@ -48,7 +48,7 @@ _Defined in [Client.ts:7](https://github.com/sinewtech/waterbase/blob/b0835b6/li
 
 • **endpoint**: String = ""
 
-_Defined in [Client.ts:5](https://github.com/sinewtech/waterbase/blob/b0835b6/lib/Client.ts#L5)_
+_Defined in [Client.ts:5](https://github.com/sinewtech/waterbase/blob/5854550/lib/Client.ts#L5)_
 
 ---
 
@@ -56,7 +56,7 @@ _Defined in [Client.ts:5](https://github.com/sinewtech/waterbase/blob/b0835b6/li
 
 • **headers**: any
 
-_Defined in [Client.ts:7](https://github.com/sinewtech/waterbase/blob/b0835b6/lib/Client.ts#L7)_
+_Defined in [Client.ts:7](https://github.com/sinewtech/waterbase/blob/5854550/lib/Client.ts#L7)_
 
 ## Methods
 
@@ -64,7 +64,7 @@ _Defined in [Client.ts:7](https://github.com/sinewtech/waterbase/blob/b0835b6/li
 
 ▸ **addHeader**(`key`: string, `value`: string): this
 
-_Defined in [Client.ts:49](https://github.com/sinewtech/waterbase/blob/b0835b6/lib/Client.ts#L49)_
+_Defined in [Client.ts:49](https://github.com/sinewtech/waterbase/blob/5854550/lib/Client.ts#L49)_
 
 Adds a header for the http request
 
@@ -83,7 +83,7 @@ Adds a header for the http request
 
 ▸ **call**(`method`: string, `path?`: string, `headers?`: object, `params?`: {}): Promise\<any>
 
-_Defined in [Client.ts:65](https://github.com/sinewtech/waterbase/blob/b0835b6/lib/Client.ts#L65)_
+_Defined in [Client.ts:65](https://github.com/sinewtech/waterbase/blob/5854550/lib/Client.ts#L65)_
 
 Makes the call to the server a lot easier
 
@@ -104,7 +104,7 @@ Makes the call to the server a lot easier
 
 ▸ **setEndpoint**(`endpoint`: string): this
 
-_Defined in [Client.ts:36](https://github.com/sinewtech/waterbase/blob/b0835b6/lib/Client.ts#L36)_
+_Defined in [Client.ts:36](https://github.com/sinewtech/waterbase/blob/5854550/lib/Client.ts#L36)_
 
 Set the endpoint
 
@@ -124,7 +124,7 @@ this
 
 ▸ **setKey**(`value`: string): this
 
-_Defined in [Client.ts:24](https://github.com/sinewtech/waterbase/blob/b0835b6/lib/Client.ts#L24)_
+_Defined in [Client.ts:24](https://github.com/sinewtech/waterbase/blob/5854550/lib/Client.ts#L24)_
 
 Set secret key
 
