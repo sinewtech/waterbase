@@ -43,7 +43,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged index.ts lib/**/*.ts"
+      "pre-commit": "pretty-quick --staged index.ts lib/**/*.ts; typedoc --mode file --plugin typedoc-plugin-markdown --readme none lib"
     }
   },
   "dependencies": {
