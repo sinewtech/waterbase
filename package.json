@@ -7,7 +7,7 @@
   "scripts": {
     "prepare": "npm run build",
     "build": "tsc",
-    "docs": "typedoc --mode file --plugin typedoc-plugin-markdown --readme none lib"
+    "docs": "typedoc --mode file --readme none lib"
   },
   "repository": {
     "type": "git",
