@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import { LocalStorage } from 'node-localstorage';
 import Service from '../Service';
 import User from '../helpers/User';
-if (typeof localStorage === 'undefined' || localStorage === null) {
+if (typeof global.localStorage === 'undefined' || global.localStorage === null) {
   global.localStorage = new LocalStorage('./localStorage');
 }
 class Auth extends Service {
