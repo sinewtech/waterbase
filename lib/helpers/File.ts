@@ -74,25 +74,42 @@ class File implements Files {
    *
    * @return Promise<object>
    */
-  upload(file: Buffer) {
+  upload(file: Blob) {
     return new Promise<object>((res, rej) => {
       const form = new FormData();
       form.append('path', this.path);
       form.append('file', file, path.basename(this.path));
-      this.#client
-        .call(
-          'post',
-          '/storage/',
-          {
-            'content-type': 'multipart/form-data;',
-            ...form.getHeaders(),
-          },
-          form.getBuffer()
-        )
-        .then((data) => {
-          res(data);
-        })
-        .catch(rej);
+      // Web or node
+      if (typeof window !== 'undefined') {
+        this.#client
+          .call(
+            'post',
+            '/storage/',
+            {
+              'content-type': 'multipart/form-data;',
+            },
+            form
+          )
+          .then((data) => {
+            res(data);
+          })
+          .catch(rej);
+      } else {
+        this.#client
+          .call(
+            'post',
+            '/storage/',
+            {
+              'content-type': 'multipart/form-data;',
+              ...form.getHeaders(),
+            },
+            form.getBuffer()
+          )
+          .then((data) => {
+            res(data);
+          })
+          .catch(rej);
+      }
     });
   }
 
@@ -105,26 +122,42 @@ class File implements Files {
    *
    * @return Promise<object>
    */
-  update(file: Buffer, newPath?: string) {
+  update(file: Blob, newPath?: string) {
     return new Promise<object>((res, rej) => {
       const form = new FormData();
       form.append('oldPath', this.path);
       form.append('path', newPath || this.path);
       form.append('file', file, path.basename(this.path));
-      this.#client
-        .call(
-          'put',
-          '/storage/',
-          {
-            'content-type': 'multipart/form-data;',
-            ...form.getHeaders(),
-          },
-          form.getBuffer()
-        )
-        .then((data) => {
-          res(data);
-        })
-        .catch(rej);
+      if (typeof window !== 'undefined') {
+        this.#client
+          .call(
+            'put',
+            '/storage/',
+            {
+              'content-type': 'multipart/form-data;',
+            },
+            form
+          )
+          .then((data) => {
+            res(data);
+          })
+          .catch(rej);
+      } else {
+        this.#client
+          .call(
+            'put',
+            '/storage/',
+            {
+              'content-type': 'multipart/form-data;',
+              ...form.getHeaders(),
+            },
+            form.getBuffer()
+          )
+          .then((data) => {
+            res(data);
+          })
+          .catch(rej);
+      }
     });
   }
 }
