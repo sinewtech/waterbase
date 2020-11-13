@@ -24,6 +24,12 @@ class User implements Users {
     this.#refreshToken = decode.refreshToken;
   }
 
+  /**
+   *
+   * Refresh the jwt token
+   *
+   * @return Promise<any>
+   */
   renewToken = () => {
     return new Promise((res, rej) => {
       this.#client
@@ -50,6 +56,12 @@ class User implements Users {
     });
   };
 
+  /**
+   *
+   * Will delete the account from waterbase
+   *
+   * @return Promise<any>
+   */
   deleteAccount = () => {
     return new Promise((res, rej) => {
       this.#client
