@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import { LocalStorage } from 'node-localstorage';
 import { Users } from '../models/Users';
 import Client from '../Client';
-if (typeof localStorage === 'undefined' || localStorage === null) {
+if (typeof global.localStorage === 'undefined' || global.localStorage === null) {
   global.localStorage = new LocalStorage('./localStorage');
 }
 
