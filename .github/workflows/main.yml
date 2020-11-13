@@ -4,7 +4,7 @@
 name: Node.js publish
 
 on:
-  pull_request:
+  push:
     branches: [ master ]
 
 jobs:
