@@ -1,7 +1,7 @@
 {
   "name": "waterbase",
   "version": "0.0.2",
-  "description": "SDK for waterbase-server",
+  "description": "SDK for waterbase",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sinewtech/waterbase-sdk.git"
+    "url": "git+https://github.com/sinewtech/waterbase.git"
   },
   "keywords": [
     "SDK",
@@ -23,9 +23,9 @@
   "author": "Sinewave LLC",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/sinewtech/waterbase-sdk/issues"
+    "url": "https://github.com/sinewtech/waterbase/issues"
   },
-  "homepage": "https://github.com/sinewtech/waterbase-sdk#readme",
+  "homepage": "https://github.com/sinewtech/waterbase#readme",
   "devDependencies": {
     "@types/node": "^14.14.6",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
