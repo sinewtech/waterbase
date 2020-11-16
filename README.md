@@ -1,4 +1,6 @@
 # :droplet: Waterbase
+[![GitHub issues](https://img.shields.io/github/issues/sinewtech/waterbase)](https://github.com/sinewtech/waterbase/issues) [![GitHub forks](https://img.shields.io/github/forks/sinewtech/waterbase)](https://github.com/sinewtech/waterbase/network) [![GitHub stars](https://img.shields.io/github/stars/sinewtech/waterbase)](https://github.com/sinewtech/waterbase/stargazers) [![GitHub license](https://img.shields.io/github/license/sinewtech/waterbase)](https://github.com/sinewtech/waterbase/blob/develop/LICENSE) ![waterbase](https://img.shields.io/npm/v/waterbase) ![npm bundle size](https://img.shields.io/bundlephobia/min/waterbase) ![downloads](https://img.shields.io/npm/dw/waterbase)
+
 Free, open source and self-hosted BaaS sdk by Sinewave. 
 
 ## Why
