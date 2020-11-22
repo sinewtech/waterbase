@@ -1,4 +1,4 @@
 export interface Documents {
   id: string;
-  data: object;
+  data: any;
 }

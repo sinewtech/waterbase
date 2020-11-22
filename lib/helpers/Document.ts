@@ -4,7 +4,7 @@ import { Documents } from '../models/Documents';
 class Document implements Documents {
   id: string = '';
 
-  data: object;
+  data: any;
 
   #collection: string = '';
 
